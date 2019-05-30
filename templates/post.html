@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+ {% block body %}
+ 
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{ url_for('static',filename='img/post-bg.jpg')}}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h3>Here you can find some of the course materials related to the important topics that i studied during my semesters. </h3>
+           </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <table class="table">
+
+    <thead>
+      <tr class="bg-secondary">
+        <th>S.NO</th>
+        <th>SUBJECT</th>
+        <th>FILE</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for post in posts %}
+   
+      <tr class="{{ loop.cycle('bg-info', 'bg-success') }}">
+        <td>{{post.sno}}.</td>
+        <td>{{ post.subject }}</td>
+        <td>
+          {% set fname = 'codes/'+ post.filename %}
+          <a href="{{ url_for('static',filename=fname)}}" download>
+          <i class="material-icons">launch</i>download
+        </a>
+       </td>
+      </tr>   
+      {% endfor %}
+
+      <!--   
+      <tr class="bg-success">
+        <td>2.</td>
+        <td>Operating Systems</td>
+        <td>   <a href="{{ url_for('static',filename='codes/os.zip')}}" download>
+          <i class="material-icons">launch</i>download
+        </a>
+       </td>
+      </tr>
+      <tr class="bg-info">
+        <td>3.</td>
+        <td>Advanced Data Structures</td>
+        <td><a href="{{ url_for('static',filename='codes/ads.zip')}}" download>
+          <i class="material-icons">launch</i>download
+        </a></td>
+      </tr>
+      <tr class="bg-success">
+        <td>4.</td>
+        <td>Computer Graphics</td>
+        <td><a href="{{ url_for('static',filename='codes/cg.zip')}}" download>
+          <i class="material-icons">launch</i>download
+        </a></td>
+      </tr>
+    -->
+      </tbody>
+  </table>
+        </div>
+      </div>
+    </div>
+  </article>
+
+{% endblock %}

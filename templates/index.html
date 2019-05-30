@@ -1,0 +1,68 @@
+
+ {% extends "layout.html" %}
+
+ {% block body %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{ url_for('static',filename='img/homewall.jpg') }}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+          	<h2>It's me</h2>
+            <h1>{{params['my_name']}}</h1>
+            <span class="subheading">{{ params['descript'] }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container" style=" background-color: lightblue;">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-preview">
+            <h2 class="post-title">
+              Experience is the name everyone gives to their mistakes.
+            </h2>
+          <p class="post-meta">By
+          	Oscar Wilde</p>
+        </div>
+        <hr>
+        <div class="post-preview">
+            <h2 class="post-title">
+             Simplicity is the soul of efficiency.
+            </h2>
+          <p class="post-meta">By
+            	Austin Freeman
+            </p>
+        </div>
+        <hr>
+        <div class="post-preview">
+            <h2 class="post-title">
+              It’s not a bug – it’s an undocumented feature.
+            </h2>
+            
+          <p class="post-meta">By
+             Anonymous</p>
+        </div>
+        <hr>
+        <div class="post-preview">
+            <h2 class="post-title">
+              Code never lies, comments sometimes do.
+            </h2>
+            
+          <p class="post-meta">By
+             Ron Jeffries</p>
+        </div>
+        <hr>
+        <!-- Pager -->
+        <div class="clearfix">
+         <!-- <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+  
