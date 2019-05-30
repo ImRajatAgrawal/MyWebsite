@@ -2,8 +2,8 @@
    "params":
   {
       "local_server" : "True",
-      "local_uri" : "mysql://root:rajat123@localhost/mywebsite",
-      "prod_uri" : "mysql://root:rajat123@localhost/mywebsite",
+      "local_uri" : "mysql://root@localhost/mywebsite",
+      "prod_uri" : "mysql://root@localhost/mywebsite",
       "git_url" : "https://www.github.com/ImRajatAgrawal",
       "lndin_url" : "https://www.linkedin.com/in/rajat-agrawal-231273185",
       "cochf_url" : "https://www.codechef.com/users/rajatrcoem",
