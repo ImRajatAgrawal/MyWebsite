@@ -7,7 +7,6 @@ with open('config.json', 'r') as c:
     params = json.load(c)["params"]
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:rajat123@localhost/mywebsite'
 local_server=True
 
 
